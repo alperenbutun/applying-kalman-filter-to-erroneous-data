@@ -1,38 +1,8 @@
-# Applying-Kalman-Filtering-to-a-List-of-Data-with-Error
 Applying Kalman Filter to a List of Data with Error
-randomDataCountForTest = 5000;
-dataWithError          = [];
-%% CALCULATE STANDARD DEVIATION OF MEASUREMENT WITH ERROR %%
-c9 = std(dataWithError);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-z(:,1) = 0;
-for m = 1:randomDataCountForTest
-    z(:,m+1) = dataWithError(m);
-end
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-H = 1;
-F = 1;
-G = 1;
-u = 0;
-N = length(z);
-R = c9;
-I = 1;
-Q = 0;
 
-x(:, 1) = 0;
+Kalman Filter is a form of predictor-corrector. Using the algorithm in this repository, a really nice estimation can be made over a list of data with error.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-P = 1;
-
-for k= 2:N
-    x(:, k) = F*x(:, k-1) + G*u;
-    P = F*P*F' + Q;
-    K = P*H' / (H*P*H' + R);
-    x(:,k) = x(:,k) + K*(z(k) - H*x(:,k));
-    P = (I - K*H)*P;
-end
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-disp(x);
-plot(x);
+There are three files in total.
+1 - Kalman Filter.pdf: File showing the algorithm and plot of estimation.
+2 - KalmanDataX      : File showing the algorithm and the filter's x variable which is keeping estimation data.
+3 - KalmanDataY      : File showing the algorithm and the filter's y variable which is keeping the original measurement data.
