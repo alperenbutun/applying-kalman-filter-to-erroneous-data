@@ -6,5 +6,5 @@ Using the algorithm in this repository, a really nice estimation can be made ove
 
 There are three files in total.
 * Kalman Filter.pdf: File showing the algorithm and plot of estimation.
+* KalmanDataZ.pdf: File showing the algorithm and the filter's z variable which is keeping the original measurement data.
 * KalmanDataX.pdf: File showing the algorithm and the filter's x variable which is keeping estimation data.
-* KalmanDataY.pdf: File showing the algorithm and the filter's y variable which is keeping the original measurement data.
