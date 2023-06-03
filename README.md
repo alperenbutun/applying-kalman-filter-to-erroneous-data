@@ -1,6 +1,6 @@
 Applying Kalman Filter to Erroneous Data
 
-Kalman Filter is a predictor-corrector developed by Emil Kálmán in 1960s
+Kalman Filter is a predictor-corrector.
 
 Using the algorithm in this repository, a really nice estimation can be taken.
 
