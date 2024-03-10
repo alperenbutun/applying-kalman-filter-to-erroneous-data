@@ -1,4 +1,4 @@
-Applying Kalman Filter to Erroneous Data
+Applying Kalman Filter to Inaccurate Data
 
 Kalman Filter is a predictor-corrector.
 
